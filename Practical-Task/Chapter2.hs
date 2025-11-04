@@ -42,7 +42,7 @@ add x y = x + y
 isEven :: Int -> Bool
 isEven x = True
 concatStrings :: String -> String -> String
-concatStrings x y = x ++ y
+concatStrings x y = "x ++ y"
 
 main :: IO ()
 main = do
