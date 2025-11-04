@@ -19,19 +19,19 @@ main :: IO ()
 main = do
  print (increment 5)
  --Answer = 6
- doubleThenIncrement :: Int -> Int
- doubleThenIncrement x = x * 2 + 1
+doubleThenIncrement :: Int -> Int
+doubleThenIncrement x = x * 2 + 1
 
- main :: IO ()
- main = do
-  print (doubleThenIncrement 3)
+main :: IO ()
+main = do
+ print (doubleThenIncrement 3)
  --Answer = 7
- circleArea :: Float -> Float
- circleArea r = pi * r^2
+circleArea :: Float -> Float
+circleArea r = pi * r^2
 
- main :: IO ()
- main = do
-  print (circleArea 4)
+main :: IO ()
+main = do
+ print (circleArea 4)
  --Answer = 50.2857
 infiniteNumbers :: [Int]
 infiniteNumbers = [1...] 
@@ -42,3 +42,20 @@ main :: IO ()
 main = do
  print (firstN 5)
  --Answer = 1 2 3 4 5
+applyTwice :: (Int -> Int) -> Int -> Int
+applyTwice f x = f (f x)
+
+double :: Int -> Int
+double x = x * 2
+
+main :: IO ()
+main = do
+ print (applyTwice double 3)
+ --Answer = 6
+fToC :: Float -> Float
+fToC f = f - 32 * 5 / 9
+
+main :: IO ()
+main = do
+ print (fToC 100)
+ --Answer = 82.22222
