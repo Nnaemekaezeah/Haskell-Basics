@@ -33,4 +33,12 @@ main = do
  main = do
   print (circleArea 4)
  --Answer = 50.2857
- 
+infiniteNumbers :: [Int]
+infiniteNumbers = [1...] 
+firstN :: Int -> [Int]
+firstN n = take n infiniteNumbers
+
+main :: IO ()
+main = do
+ print (firstN 5)
+ --Answer = 1 2 3 4 5
